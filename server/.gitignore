@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+sessions
+logs
+certs
+*.swp
+.env
+
+.env.local
+.env.*.local
+
+npm-debug.log*

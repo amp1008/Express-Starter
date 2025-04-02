@@ -1,0 +1,230 @@
+{
+  "version": "1.0",
+  "hostname": "test-cluster-node-01",
+  "nested_cluster": true,
+  "ahv_network_config": {
+    "host_interfaces": [
+      {
+        "name": "br0",
+        "boot_proto": "static",
+        "vswitch_name": "br0",
+        "ip": "10.24.139.213",
+        "netmask": "255.255.252.0",
+        "gateway": "10.24.136.1"
+      }
+    ],
+    "virtual_switches": [
+      {
+        "name": "br0",
+        "bond_mode": "active-backup",
+        "mtu": 1500,
+        "uplinks": ["virtio_net"]
+      }
+    ],
+    "dns_ip": "10.40.64.15,10.40.64.16"
+  },
+  "vms": [
+    {
+      "interfaces": [
+        {
+          "name": "eth0",
+          "ip": "10.24.139.214",
+          "netmask": "255.255.252.0",
+          "gateway_ip": "10.24.136.1",
+          "nameservers": ["10.40.64.15", "10.40.64.16"],
+          "mtu": 1500
+        }
+      ],
+      "installer": {
+        "tar": "http://endor.dyn.nutanix.com/releases/Fraser-6.10-stable/45706f65299ffde905da43b6e7d98478d071b7b9/1727799597/release/tar/nutanix_installer_package-release-fraser-6.10-stable-45706f65299ffde905da43b6e7d98478d071b7b9-x86_64.tar.gz"
+      },
+      "type": "cvm",
+      "version": "master",
+      "memory": 20971520,
+      "vcpus": "8",
+      "dual_boot": false,
+      "ssh_keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAw8NhpiLG/6c8c0LocaQVM6+x8yBvLS+z13nYlqzSKr64HQSH+IIx14bS+uh0xf8ou5ROnbUa44YM9qG2RBK1hBVrwTIKZBwFwOTxDuXH9YoswqflnOeyTGUFerrMxlg5iYvKE01QIErKWt/BJ+hK/qVQi6SHh/WhyjAGNQPxjPBG3oEUFoLV9uDLX9RT/sLIQpBf91DCbF9+2rSToqjydj36d38JbmuGJGqr+DrEd0lKzfiJiQ39t3AXBE1bY2ISX+uwq07XkYZbrHaijrxnOBFZE7ETQmyxdcOvgDxvhnhZpFsUqbPqIqa45CwFWV+btzITvpJkveYjGSGR7ZJNHQ== nutanix@titan"
+      ],
+      "hardware_config": {
+        "node": {
+          "model_string": "test-cluster-node-01",
+          "storage_controllers": [
+            {
+              "class": "SATA",
+              "mapping": [
+                {
+                  "slot_designation": "0",
+                  "hba_address": "0:0",
+                  "slot_id": 0,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "1",
+                  "hba_address": "0:1",
+                  "slot_id": 1,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "2",
+                  "hba_address": "0:2",
+                  "slot_id": 2,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "3",
+                  "hba_address": "0:3",
+                  "slot_id": 3,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "4",
+                  "hba_address": "0:4",
+                  "slot_id": 4,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "5",
+                  "hba_address": "0:5",
+                  "slot_id": 5,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "6",
+                  "hba_address": "0:6",
+                  "slot_id": 6,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "7",
+                  "hba_address": "0:7",
+                  "slot_id": 7,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "8",
+                  "hba_address": "0:8",
+                  "slot_id": 8,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "9",
+                  "hba_address": "0:9",
+                  "slot_id": 9,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "10",
+                  "hba_address": "0:10",
+                  "slot_id": 10,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "11",
+                  "hba_address": "0:11",
+                  "slot_id": 11,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "12",
+                  "hba_address": "0:12",
+                  "slot_id": 12,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "13",
+                  "hba_address": "0:13",
+                  "slot_id": 13,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "14",
+                  "hba_address": "0:14",
+                  "slot_id": 14,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "15",
+                  "hba_address": "0:15",
+                  "slot_id": 15,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "16",
+                  "hba_address": "0:16",
+                  "slot_id": 16,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "17",
+                  "hba_address": "0:17",
+                  "slot_id": 17,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "18",
+                  "hba_address": "0:18",
+                  "slot_id": 18,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "19",
+                  "hba_address": "0:19",
+                  "slot_id": 19,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "20",
+                  "hba_address": "0:20",
+                  "slot_id": 20,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "21",
+                  "hba_address": "0:21",
+                  "slot_id": 21,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "22",
+                  "hba_address": "0:22",
+                  "slot_id": 22,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "23",
+                  "hba_address": "0:23",
+                  "slot_id": 23,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "24",
+                  "hba_address": "0:24",
+                  "slot_id": 24,
+                  "led_address": "negative_led:"
+                },
+                {
+                  "slot_designation": "25",
+                  "hba_address": "0:25",
+                  "slot_id": 25,
+                  "led_address": "negative_led:"
+                }
+              ],
+              "name": "CE Virtual HBA",
+              "address": ""
+            }
+          ],
+          "hardware_attributes": {},
+          "node_number": 1
+        },
+        "version": 1,
+        "chassis": {
+          "height_u": 1,
+          "class": "SMIPMI",
+          "num_nodes": 1
+        }
+      }
+    }
+  ]
+}
+
